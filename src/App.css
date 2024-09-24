@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.bg-grey {
+  background-color: #1F2833;
+}
+
+.snippet-lab-world {
+  font-size: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #f0f2f3;
+}
+
+.snippet-lab-title {
+  color: #66FCF1; 
+  font-size: 4rem; 
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+.buttons-section button {
+  margin: 10px;
+}
+
+.video-card {
+  margin-top: 20px;
+}
+
+.team-card {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.navbar a {
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
