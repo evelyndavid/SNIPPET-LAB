@@ -1,32 +1,40 @@
+
+
+
+
+
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import axios from "axios";
 
-const Login = ({ setPage, onLogin }) => {
-  const [username, setUsername] = useState("");
+const Login = () => {
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleHome = () => {
-    window.location.href = '/'; 
+  const handleSignUp = () => {
+        window.location.href = '/SignUp'; 
     };
+    
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (username && password) {
-      
-      handleHome();
-    } else {
-      alert("Please fill all fields.");
+    try {
+      const response = await axios.post('http://localhost:5000/Login', {
+        name,
+        password,
+      });
+      alert(response.data.message); // Show success or error message
+      if (response.data.success) {
+        window.location.href = '/'; // Redirect on success
+      }
+    } catch (error) {
+      alert("Error logging in: " + (error.response?.data?.error || error.message));
     }
   };
 
-  const handleSignUp = () => {
-    window.location.href = '/SignUp'; 
-};
+  
 
   return (
-    <>
-      {/* Login Form Section */}
-      <Container style={{ display: "flex", justifyContent: "center", alignItems: "center",  minHeight: '88vh',  
+    <Container style={{ display: "flex", justifyContent: "center", alignItems: "center",  minHeight: '88vh',  
       minWidth: '100vw' ,backgroundColor:"#1F2833"}}>
         <div
           style={{
@@ -47,8 +55,8 @@ const Login = ({ setPage, onLogin }) => {
               <input
                 type="text"
                 placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
                 style={{
                   width: "100%",
@@ -91,7 +99,7 @@ const Login = ({ setPage, onLogin }) => {
                   border: "2px solid rgba(0, 0, 0, 0.2)",
                   borderRadius: "40px",
                   fontSize: "16px",
-                  color: "#fff",
+                  color: "#000",
                   padding: "20px 45px 20px 20px",
                 }}
               />
@@ -142,11 +150,7 @@ const Login = ({ setPage, onLogin }) => {
           </form>
         </div>
       </Container>
-    </>
   );
 };
 
 export default Login;
-
-
-
