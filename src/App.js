@@ -57,17 +57,20 @@ import Header from './Header';
 import Login from './Login.js';
 import SignUp from './SignUp.js';
 import Home from './HomePage.js';
+import CreateFlashcards from './CreateFlashcards';
 import './App.css';
-
+import LoadingScreen from './LoadingScreen.js';
 const App = () => {
   
   return (
     <Router>
+      <LoadingScreen/>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} /> {/* Set Home as the default route */}
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/create" element={<CreateFlashcards />} />
       </Routes>
     </Router>
   );
