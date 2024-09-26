@@ -120,7 +120,7 @@ const HomePage = () => {
           <Card className="team-card">
             <Card.Img 
               variant="top" 
-              src="/B.jpg" 
+              src="/path-to-team-member2.jpg" 
               style={{ width: '100%', height: '200px', objectFit: 'cover' }} 
             />
             <Card.Body>
@@ -132,7 +132,7 @@ const HomePage = () => {
           <Card className="team-card">
             <Card.Img 
               variant="top" 
-              src="/H.jpg" 
+              src="/path-to-team-member2.jpg" 
               style={{ width: '100%', height: '200px', objectFit: 'cover' }} 
             />
             <Card.Body>
