@@ -179,19 +179,19 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Import useNavigate if using React Router
+import { useNavigate } from "react-router-dom"; 
 
 const Login = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // React Router navigation
+  const navigate = useNavigate(); 
 
   const handleSignUp = () => {
-    navigate('/SignUp'); // Use navigate for routing instead of window.location.href
+    navigate('/SignUp'); 
   };
 
   const login = (username) => {
-    // Store the username in localStorage
+    
     localStorage.setItem('username', username);
     console.log('User logged in:', username);
   };
@@ -203,10 +203,10 @@ const Login = () => {
         name,
         password,
       });
-      alert(response.data.message); // Show success or error message
+      alert(response.data.message); 
       if (response.data.success) {
-        login(name); // Call the login function to store username in localStorage
-        navigate('/'); // Navigate to the homepage after successful login
+        login(name); 
+        navigate('/'); 
       }
     } catch (error) {
       alert("Error logging in: " + (error.response?.data?.error || error.message));
@@ -278,7 +278,7 @@ const Login = () => {
                 border: "2px solid rgba(0, 0, 0, 0.2)",
                 borderRadius: "40px",
                 fontSize: "16px",
-                color: "#fff", // Changed to white for consistency
+                color: "#fff", 
                 padding: "20px 45px 20px 20px",
               }}
             />

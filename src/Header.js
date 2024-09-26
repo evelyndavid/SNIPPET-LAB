@@ -35,6 +35,7 @@ const Header = () => {
                         <Nav.Link onClick={handleHome} style={{ color: '#000', fontWeight: 'bold' }}>Home</Nav.Link>
                         <Nav.Link onClick={handleSignUp} style={{ color: '#000', fontWeight: 'bold' }}>Sign Up</Nav.Link>
                         <Nav.Link onClick={handleLogin} style={{ color: '#000', fontWeight: 'bold' }}>Login</Nav.Link>
+                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>
