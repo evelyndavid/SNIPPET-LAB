@@ -6,6 +6,7 @@ const HomePage = () => {
   const navigate = useNavigate(); 
 
   const handleCreateFlashcards = () => {
+    
     navigate('/create'); 
   };
   
@@ -38,7 +39,7 @@ const HomePage = () => {
           <Card className="text-white bg-dark mb-4">
             <Card.Body>
               <iframe 
-                style={{ width: '100%', height: '250px' }} 
+                style={{ width: '100%', height: '500px' }} 
                 src="/org1.mp4" 
                 title="C Programming" 
                 frameBorder="0" 
@@ -58,7 +59,7 @@ const HomePage = () => {
           <Card className="text-white bg-dark mb-4">
             <Card.Body>
               <iframe 
-                style={{ width: '100%', height: '250px' }} 
+                style={{ width: '100%', height: '500px' }} 
                 src="/org1.mp4" 
                 title="Java Programming" 
                 frameBorder="0" 
@@ -78,7 +79,7 @@ const HomePage = () => {
           <Card className="text-white bg-dark mb-4">
             <Card.Body>
               <iframe 
-                style={{ width: '100%', height: '250px' }} 
+                style={{ width: '100%', height: '500px' }} 
                 src="/org1.mp4" 
                 title="Python Programming" 
                 frameBorder="0" 
@@ -98,7 +99,7 @@ const HomePage = () => {
           <Card className="text-white bg-dark mb-4">
             <Card.Body>
               <iframe 
-                style={{ width: '100%', height: '250px' }} 
+                style={{ width: '100%', height: '500px' }} 
                 src="/org1.mp4" 
                 title="C++ Programming" 
                 frameBorder="0" 

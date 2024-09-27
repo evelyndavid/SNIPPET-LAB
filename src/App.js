@@ -70,6 +70,8 @@ const App = () => {
         <Route path="/" element={<Home />} /> {/* Set Home as the default route */}
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
+        
+        
         <Route path="/create" element={<CreateFlashcards />} />
       </Routes>
     </Router>
